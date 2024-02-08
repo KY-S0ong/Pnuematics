@@ -52,7 +52,7 @@ public class RobotContainer {
     new JoystickButton(xc, Constants.xcB).whileTrue(m_StopPiston);
 
     new JoystickButton(xc, 3).whileTrue(m_actuateBoth);
-    new JoystickButton(xc, 4).whileTrue(m_StopPiston);
+    new JoystickButton(xc, 4).whileTrue(m_StopPistonBoth);
   }
 
 
