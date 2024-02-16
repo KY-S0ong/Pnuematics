@@ -20,7 +20,7 @@ public final class Constants {
   }
 
 public static final int pcm = 1;
-public static final int XC1 = 0;
+public static final int XC1 = 1;
 public static final int xcA = 1;
 public static final int xcB = 2;
 public static final int falcon1 = 12;

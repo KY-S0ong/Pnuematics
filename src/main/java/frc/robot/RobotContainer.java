@@ -9,8 +9,8 @@ import frc.robot.commands.Autos;
 import frc.robot.commands.ExampleCommand;
 import frc.robot.commands.movePiston;
 import frc.robot.commands.movePistonBoth;
-import frc.robot.commands.stopPiston;
-import frc.robot.commands.stopPistonBoth;
+import frc.robot.commands.reversePiston;
+import frc.robot.commands.reversePistonBoth;
 import frc.robot.subsystems.ExampleSubsystem;
 import frc.robot.subsystems.pneumatics;
 import edu.wpi.first.wpilibj.XboxController;
@@ -34,9 +34,9 @@ public class RobotContainer {
   //private final falcon m_motor = new falcon();
 
   private final movePiston m_actuate = new movePiston(piston);
-  private final stopPiston m_StopPiston = new stopPiston(piston);
+  private final reversePiston m_ReversePiston = new reversePiston(piston);
   private final movePistonBoth m_actuateBoth = new movePistonBoth(piston);
-  private final stopPistonBoth m_StopPistonBoth = new stopPistonBoth(piston);
+  private final reversePistonBoth m_ReversePistonBoth = new reversePistonBoth(piston);
 
   //private final driveMotor m_DriveMotor = new driveMotor(m_motor);
   //private final driveByController m_drive = new driveByController(xc, m_motor);
@@ -49,10 +49,10 @@ public class RobotContainer {
     // Configure the trigger bindings
     //m_motor.setDefaultCommand(m_drive);
     new JoystickButton(xc, Constants.xcA).whileTrue(m_actuate);
-    new JoystickButton(xc, Constants.xcB).whileTrue(m_StopPiston);
+    new JoystickButton(xc, Constants.xcB).whileTrue(m_ReversePiston);
 
     new JoystickButton(xc, 3).whileTrue(m_actuateBoth);
-    new JoystickButton(xc, 4).whileTrue(m_StopPistonBoth);
+    new JoystickButton(xc, 4).whileTrue(m_ReversePistonBoth);
   }
 
 

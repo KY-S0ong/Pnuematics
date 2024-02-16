@@ -7,10 +7,10 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.subsystems.pneumatics;
 
-public class stopPiston extends Command {
+public class reversePistonBoth extends Command {
   /** Creates a new stopPiston. */
   private pneumatics piston;
-  public stopPiston(pneumatics p) {
+  public reversePistonBoth(pneumatics p) {
     // Use addRequirements() here to declare subsystem dependencies.
     piston = p;
     addRequirements(piston);
@@ -23,7 +23,7 @@ public class stopPiston extends Command {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    piston.setReverse();
+    piston.setReverseBoth();
   }
 
   // Called once the command ends or is interrupted.
