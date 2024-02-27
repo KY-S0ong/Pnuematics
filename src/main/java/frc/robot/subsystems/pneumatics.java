@@ -12,7 +12,7 @@ import frc.robot.Constants;
 
 public class pneumatics extends SubsystemBase {
   /** Creates a new pneumatics. */
-  private final DoubleSolenoid piston = new DoubleSolenoid(Constants.pcm, PneumaticsModuleType.CTREPCM, 0,1);
+  private final DoubleSolenoid climberpiston = new DoubleSolenoid(Constants.pcm, PneumaticsModuleType.CTREPCM, 0,1);
   private final DoubleSolenoid piston2 = new DoubleSolenoid(Constants.pcm, PneumaticsModuleType.CTREPCM, 2,3);
   private final DoubleSolenoid piston3 = new DoubleSolenoid(Constants.pcm, PneumaticsModuleType.CTREPCM, 4,5);
 
@@ -25,7 +25,7 @@ public class pneumatics extends SubsystemBase {
     // This method will be called once per scheduler run
   }
   public void setForword(){
-    piston.set(Value.kForward);
+    climberpiston.set(Value.kForward);
   }
   public void setForwardBoth(){
     piston2.set(Value.kForward);
@@ -34,7 +34,7 @@ public class pneumatics extends SubsystemBase {
   
 
   public void setReverse(){
-    piston.set(Value.kReverse);
+    climberpiston.set(Value.kReverse);
   }
   public void setReverseBoth(){
     piston2.set(Value.kReverse);
@@ -43,7 +43,7 @@ public class pneumatics extends SubsystemBase {
   
 
   public void setOff(){
-    piston.set(Value.kOff);
+    climberpiston.set(Value.kOff);
   }
   public void setOffBoth(){
     piston2.set(Value.kOff);
